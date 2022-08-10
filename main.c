@@ -20,7 +20,8 @@ int main(void)
 			fill_args(entry, arguments);
 			if (arguments[0] != NULL)
 			{
-				exist_stat = exist(arguments[0]);/**Exist evaluates if the path entered exists*/
+			  /**Exist evaluates if the path entered exists*/
+			        exist_stat = exist(arguments[0]);
 				if (exist_stat != 0)/**Did not find the file*/
 				{
 					vf_stat = verify_path(arguments);
