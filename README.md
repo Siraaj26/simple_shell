@@ -1,4 +1,4 @@
-# BAShell
+# hsh
 This repository contains the files for alx-Holberton's simple_shell project. It can be compiled using GCC and will execute a simple shell that can be used for some basic tasks and programs most commonly found in the $PATH.
 
 Pre-requisites
@@ -45,22 +45,21 @@ Test Output
 It works both
 Interactive mode:
 
-Siraaj$|./BAShell
-BAShell$ ls
-AUTHORS    builtin.c        main.c    shell.h
-BAShell    extra_strings.c  memory.c  strings.c
-README.md  extra_tools.c    parser.c  tools.c
-BAShell$ exit
-Sasha$|
+$ ./hsh
+($) /bin/ls
+hsh main.c shell.c
+($)
+($) exit
+$
 Non-interactive mode:
-$| echo "ls" | ./hsh
-AUTHORS    builtin.c        main.c    shell.h
-BAShell    extra_strings.c  memory.c  strings.c
-README.md  extra_tools.c    parser.c  tools.c
-$|
-To exit program in interactive mode:
-The output of this program when executed it look like:
-
-exit
-Example
-ls -l *.c
+$ echo "/bin/ls" | ./hsh
+hsh main.c shell.c test_ls_2
+$
+$ cat test_ls_2
+/bin/ls
+/bin/ls
+$
+$ cat test_ls_2 | ./hsh
+hsh main.c shell.c test_ls_2
+hsh main.c shell.c test_ls_2
+$
